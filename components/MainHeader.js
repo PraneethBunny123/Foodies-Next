@@ -8,6 +8,17 @@ export default function MainHeader() {
                 <img src={logoImg.src} alt="A food plate"/>
                 NextLevel Food
             </Link>
+
+            <nav>
+                <ul>
+                    <li>
+                        <Link href='/meals'>Browse Meals</Link>
+                    </li>
+                    <li>
+                        <Link href='/community'>Foodies Community</Link>
+                    </li>                    
+                </ul>
+            </nav>
         </header>
     )
 }
