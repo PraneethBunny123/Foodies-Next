@@ -19,12 +19,7 @@ export default function MainHeader() {
             <nav className={classes.nav}>
                 <ul>
                     <li>
-                        <Link 
-                            href='/meals' 
-                            className={path.startsWith('/meals') ? classes.active : undefined}
-                        >
-                            Browse Meals
-                        </Link>
+                        
                     </li>
                     <li>
                         <Link 
