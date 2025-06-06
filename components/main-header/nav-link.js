@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
+import classes from './nav-link.module.css'
 
 export default function NavLink({children, href}) {
     const path = usePathname()
