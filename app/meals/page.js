@@ -20,7 +20,7 @@ export default async function Meals() {
                 </p>
             </header>
             <main className={classes.main}>
-                <MealGrid meals={[]}/>
+                <MealGrid meals={meals}/>
             </main>        
         </>
 
