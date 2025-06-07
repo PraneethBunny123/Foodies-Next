@@ -4,6 +4,15 @@ import classes from './page.module.css';
 export default function ShareMealPage() {
     async function shareMeal(formdata) {
         'use server'
+
+        const meal = {
+            title: formdata.get('title'),
+            summary: formdata.get('summary'),
+            instructions: formdata.get('instructions'),
+            image: formdata.get('image'),
+            creator: formdata.get('name'),
+            creator_email: formdata.get('email'),
+        }
     }
 
   return (
