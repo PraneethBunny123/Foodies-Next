@@ -1,10 +1,23 @@
 import Link from "next/link";
+import classes from './page.module.css'
 
 export default function MealDetailsPage({params}) {
     return (
-        <main>
-            <h3>Meals Details {params.slug}</h3>
-            <Link href='/meals'>Meals menu</Link>
-        </main>
+        <>
+            <header className={classes.header}>
+                <div className={classes.image}>
+                    <Image fill />
+                </div>
+                <div className={classes.headerText}>
+                    <h1>TITLE</h1>
+                    <p className={classes.creator}>
+                        by <a href={`mailto:${'EMAIL'}`}>NAME</a>
+                    </p>
+                    <p className={classes.summary}>SUMMARY</p>
+                </div>
+            </header>
+            <main>
+            </main>
+        </>
     )
 }
