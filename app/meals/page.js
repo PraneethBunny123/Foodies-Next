@@ -9,8 +9,7 @@ async function Meals() {
 
     return <MealGrid meals={meals}/>
 }
-
-
+ 
 export default async function MealsPage() {
     return (
         <>
