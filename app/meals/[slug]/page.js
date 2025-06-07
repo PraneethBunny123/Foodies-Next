@@ -1,19 +1,22 @@
-import Link from "next/link";
+import { getMeal } from '@/lib/meals';
 import classes from './page.module.css'
+import Image from "next/image";
 
 export default function MealDetailsPage({params}) {
+    const meal = getMeal(params.slug)
+
     return (
         <>
             <header className={classes.header}>
                 <div className={classes.image}>
-                    <Image fill />
+                    <Image src={meal.image} fill />
                 </div>
                 <div className={classes.headerText}>
-                    <h1>TITLE</h1>
+                    <h1>{meal.title}</h1>
                     <p className={classes.creator}>
-                        by <a href={`mailto:${'EMAIL'}`}>NAME</a>
+                        by <a href={`mailto:${'EMAIL'}`}>{meal.email}</a>
                     </p>
-                    <p className={classes.summary}>SUMMARY</p>
+                    <p className={classes.summary}>{meal.summary}</p>
                 </div>
             </header>
             <main>
