@@ -1,6 +1,15 @@
+'use client'
+
+import { useRef } from 'react'
 import classes from './image-picker.module.css'
 
 export default function ImagePicker({label, name}) {
+    const imageInputRef = useRef()
+
+    function handleButtonClick() {
+        imageInputRef.current.click()
+    }
+
     return (
         <div className={classes.picker}>
             <label htmlFor={name}>{label}</label>
@@ -11,8 +20,13 @@ export default function ImagePicker({label, name}) {
                     id={name}
                     accept='image/png, image/jpeg'
                     name='name'
+                    ref={imageInputRef}
                 />    
-                <button className={classes.button} type='button'>
+                <button 
+                    className={classes.button} 
+                    type='button'
+                    onClick={handleButtonClick}
+                >
                     Pick an Image
                 </button>
             </div>
