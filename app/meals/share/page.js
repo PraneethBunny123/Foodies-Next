@@ -2,18 +2,6 @@ import ImagePicker from '@/components/meals/image-picker';
 import classes from './page.module.css';
 
 export default function ShareMealPage() {
-    async function shareMeal(formdata) {
-        'use server'
-
-        const meal = {
-            title: formdata.get('title'),
-            summary: formdata.get('summary'),
-            instructions: formdata.get('instructions'),
-            image: formdata.get('image'),
-            creator: formdata.get('name'),
-            creator_email: formdata.get('email'),
-        }
-    }
 
   return (
     <>
@@ -52,7 +40,7 @@ export default function ShareMealPage() {
               required
             ></textarea>
           </p>
-          <ImagePicker />
+          <ImagePicker label='label' name='name'/>
           <p className={classes.actions}>
             <button type="submit">Share Meal</button>
           </p>
