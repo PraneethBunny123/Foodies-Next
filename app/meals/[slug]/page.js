@@ -5,6 +5,8 @@ import Image from "next/image";
 export default function MealDetailsPage({params}) {
     const meal = getMeal(params.slug)
 
+    meal.instructions = meal.instructions.replace(/\n/g, '<br />')
+
     return (
         <>
             <header className={classes.header}>
